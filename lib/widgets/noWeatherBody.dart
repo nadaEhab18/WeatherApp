@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class NoWeatherBody extends StatelessWidget {
@@ -6,16 +5,32 @@ class NoWeatherBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [
+          Colors.blueGrey,
+          Colors.white70,
+          Colors.lightBlue.shade200,
+        ],
+      )),
       child: Center(
         child: Column(
-          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("There is no weather 😔 \nStart searching now 🔍",
+           const Text(
+              "There is no weather 😔 \nStart searching now 🔍",
               style: TextStyle(
                 fontSize: 25,
-              ),)
+                fontWeight: FontWeight.bold,
+                color: Colors.blueGrey
+
+              ),
+            ),
+
           ],
         ),
       ),
