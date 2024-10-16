@@ -44,6 +44,7 @@ class DayDetails extends StatelessWidget {
               dayHumidity: weatherModel.humidityDay1,
               dayWindSpeed: weatherModel.windSpeedDay1,
             ),
+
             dailyForeCastWidget(
               dayNumber: 'Two',
               dayWeatherCondition: '${weatherModel.weatherConditionDay2}',
